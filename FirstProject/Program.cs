@@ -26,7 +26,7 @@ namespace FirstProject
                         Console.WriteLine("Meal 1, 2, or 3?");
                         response = Console.ReadLine();
                         if (response == "1")
-                            Console.WriteLine("You're getting a pulled pork sandwich.");
+                            Console.WriteLine("You're getting a pulled pork plate.");
                         else if (response == "2")
                             Console.WriteLine("You're getting the brisket plate.");
                         else if (response == "3")
@@ -37,10 +37,29 @@ namespace FirstProject
 
                 }
                 else if (response == "no")
-                    Console.WriteLine("Moe's BBQ");
+                {
+                    Console.WriteLine("I suggest Moe's BBQ then");
+                    Console.WriteLine("Are you ready to order?");
+                    response = Console.ReadLine();
+                    if (response == "yes")
+                    {
+                        Console.WriteLine("Meal A, B, or C?");
+                        response = Console.ReadLine();
+                        if (response.ToUpper() == "A")
+                            Console.WriteLine("You're getting a pulled pork sandwich.");
+                        else if (response.ToUpper() == "B")
+                            Console.WriteLine("You're getting the smoked wings.");
+                        else if (response.ToUpper() == "C")
+                            Console.WriteLine("You're getting the redneck nachos.");
+                        else
+                            Console.WriteLine("Well you're not going to eat then.");
+                    }
+                }
             }
             else if (response == "no")
+            {
                 Console.WriteLine("Too Bad, because we have great BBQ");
+            }
             else
                 Console.WriteLine("You're wasting my time!");
         }   
